@@ -5,9 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import NavigationStack from './src/navigation/NavigationStack'
 import store from './src/redux/store'
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
-import GoogleLoginHandler from './src/utils/GoogleLoginHandler'
-import { Button } from 'react-native'
-import PhoneNumberAuthentication from './src/screens/LoginPage'
+import codePush from "react-native-code-push";
+import { Text } from 'react-native'
 
 GoogleSignin.configure({
   webClientId: '72367344223-ks18bj8pbl8kmkiish04b095ag4jidn8.apps.googleusercontent.com',
@@ -19,14 +18,14 @@ export class App extends Component {
   render() {
     const Stack = createNativeStackNavigator();
     return (
-      <PhoneNumberAuthentication/>
     //   <Provider store = { store }>
     //   <NavigationContainer>
     //   <NavigationStack/>
     // </NavigationContainer>
     // </Provider>
+    <Text>Hey Man</Text>
     )
   }
 }
 
-export default App
+export default codePush(App); 
